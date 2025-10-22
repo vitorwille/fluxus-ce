@@ -1,0 +1,12 @@
+﻿<Window x:Class="fluxus_alpha.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fluxus_alpha"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="640" Width="1260">
+    <Grid Background="#fff" Margin="0,0,0,-174">
+        <TextBlock FontSize="23" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Language="pt-br" Text="Fluxus - Controle de Estoque"/><LineBreak/><Run Language="pt-br"/></TextBlock>
+    </Grid>
+</Window>
