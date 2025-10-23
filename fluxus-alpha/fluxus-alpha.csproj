@@ -9,4 +9,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="fluxus-png.png" />
+    <None Remove="fluxus-splash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="fluxus-splash.png" />
+  </ItemGroup>
+
 </Project>
