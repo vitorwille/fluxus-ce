@@ -13,6 +13,10 @@
     <None Remove="fluxus-png.png" />
     <None Remove="fluxus-splash.png" />
   </ItemGroup>
+	
+  <ItemGroup>
+    <Resource Include="fluxus-png.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <SplashScreen Include="fluxus-splash.png" />
