@@ -1,5 +1,4 @@
-﻿using fluxus_alpha.Classes;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using fluxus_alpha.Classes;
 
 namespace fluxus_alpha
 {
@@ -45,9 +45,9 @@ namespace fluxus_alpha
                 new Product
                 {
                     idProduto = 3,
-                    produto = "Teste foda",
-                    obsProduto = "te amo Sarah <3",
-                    qtdProduto = 999,
+                    produto = "Teste",
+                    obsProduto = "esta é uma outra descrição genérica",
+                    qtdProduto = 96,
                     valorProduto = 178.99f
                 }
             };
