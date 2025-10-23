@@ -6,16 +6,52 @@
         xmlns:local="clr-namespace:fluxus_alpha"
         mc:Ignorable="d"
         Title="Fluxus Controle de Estoque - Início" Height="631" Width="1260" ResizeMode="NoResize">
-    <Grid Background="#fff" Height="599" VerticalAlignment="Top">
+    <Grid Background="#fff" Height="595" VerticalAlignment="Top">
         <Rectangle Fill="#1a1a1a"  HorizontalAlignment="Center" Height="95" Stroke="Black" VerticalAlignment="Top" Width="1260"/>
-        <TextBlock Foreground="#FFF" FontSize="07" Margin="113,30,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="8"><Run Language="pt-br" Text="Fluxus"/><LineBreak/><Run Language="pt-br"/></TextBlock>
+        <TextBlock Foreground="#FFF" FontSize="9" Margin="113,28,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="10" Width="25"><Run Language="pt-br" Text="Fluxus"/><LineBreak/><Run Language="pt-br"/></TextBlock>
         <TextBlock Foreground="#FFF" FontSize="23" Margin="113,34,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33"><Run Text="Controle de Estoque"/><LineBreak/><Run/></TextBlock>
         <Image HorizontalAlignment="Left" Height="105" VerticalAlignment="Top" Width="95" Source="/fluxus-png.png"/>
         <Rectangle Fill="#fff" HorizontalAlignment="Left" Height="95" Margin="95,0,0,0" Stroke="#fff" VerticalAlignment="Top" Width="0.2"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="262,126,284,38"/>
-        <Button Name="btnExcluirProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" Content="❌ Excluir Produto" HorizontalAlignment="Left" Margin="1057,30,0,0" VerticalAlignment="Top" Height="36" Width="165"/>
-        <Button Name="btnDuplicarProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" Content="📃 Duplicar Produto" HorizontalAlignment="Left" Margin="893,30,0,0" VerticalAlignment="Top" Height="36" Width="165"/>
-        <Button Name="btnEditarProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" Content="✍️ Editar Produto" HorizontalAlignment="Left" Margin="729,30,0,0" VerticalAlignment="Top" Height="36" Width="165"/>
-        <Button Name="btnCadastrarProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" Content="🏷️ Cadastrar Produto" HorizontalAlignment="Left" Margin="565,30,0,0" VerticalAlignment="Top" Height="36" Width="165"/>
+        <DataGrid x:Name="dgProdutos" ColumnWidth="*" AlternationCount="2" AlternatingRowBackground="#ebebeb" RowBackground="#fff" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" Margin="-6,95,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding idProduto}" Width="90"/>
+                <DataGridTextColumn Header="Produto" Binding="{Binding produto}" Width="450"/>
+                <DataGridTextColumn Header="Observações gerais (cor, tamanho, etc.)" Binding="{Binding obsProduto}"/>
+                <DataGridTextColumn Header="Quantidade" Binding="{Binding qtdProduto}" Width="120"/>
+                <DataGridTextColumn Header="Valor Unitário (R$)" Binding="{Binding valorProduto}" Width="120"/>
+                <DataGridTextColumn Header="Valor Total em Estoque (R$)" Binding="{Binding valorTotalProduto}" Width="165"/>
+            </DataGrid.Columns>
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Button Name="btnExcluirProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" HorizontalAlignment="Left" Margin="1057,30,0,0" VerticalAlignment="Top" Height="36" Width="165">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets/remove.png" Height="23" VerticalAlignment="Center"/>
+                <TextBlock Text=" Excluir Produto" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button Name="btnDuplicarProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" HorizontalAlignment="Left" Margin="893,30,0,0" VerticalAlignment="Top" Height="36" Width="165">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets/copy.png" Height="23" VerticalAlignment="Center"/>
+                <TextBlock Text=" Duplicar Produto" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button Name="btnEditarProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" HorizontalAlignment="Left" Margin="729,30,0,0" VerticalAlignment="Top" Height="36" Width="165">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets/edit.png" Height="23" VerticalAlignment="Center"/>
+                <TextBlock Text=" Editar Produto" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Button Name="btnCadastrarProd" FontSize="15" Foreground="White" Background="#1a1a1a" BorderBrush="#ffc800" HorizontalAlignment="Left" Margin="565,30,0,0" VerticalAlignment="Top" Height="36" Width="165">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Assets/register.png" Height="21" VerticalAlignment="Center"/>
+                <TextBlock Text=" Cadastrar Produto" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <Label FontSize="9" Content="Produto em desenvolvimento - não representa versão final" Foreground="#fff" HorizontalAlignment="Left" Margin="1000,73,0,0" VerticalAlignment="Top" Height="22" Width="261"/>
+        <Label FontSize="9" Content="github.com/vitorwille" Foreground="#fff" HorizontalAlignment="Left" Margin="1148,0,0,0" VerticalAlignment="Top" Height="22" Width="113"/>
     </Grid>
 </Window>

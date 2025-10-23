@@ -10,8 +10,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\copy.png" />
+    <None Remove="Assets\edit.png" />
+    <None Remove="Assets\register.png" />
+    <None Remove="Assets\remove.png" />
     <None Remove="fluxus-png.png" />
     <None Remove="fluxus-splash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\copy.png" />
+    <Resource Include="Assets\edit.png" />
+    <Resource Include="Assets\register.png" />
+    <Resource Include="Assets\remove.png" />
+    <Resource Include="fluxus-png.png" />
   </ItemGroup>
 
   <ItemGroup>

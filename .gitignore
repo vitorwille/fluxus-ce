@@ -1,0 +1,9 @@
+# Ignorar a pasta .git (embora normalmente ela já seja ignorada automaticamente)
+.git/
+
+# Ignorar a pasta .vs (gerada pelo Visual Studio)
+.vs/
+
+# Ignorar as pastas bin e obj dentro de fluxus-alpha e todos os seus conteúdos
+fluxus-alpha/**/bin/
+fluxus-alpha/**/obj/
